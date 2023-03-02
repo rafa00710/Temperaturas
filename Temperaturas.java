@@ -1,3 +1,5 @@
+package Shadow;
+
 import java.util.Scanner;
 
 public class Temperaturas {
@@ -5,15 +7,16 @@ public class Temperaturas {
 
     public static void main(String[] args) {
 
-     double Celsius, Fahrenheit, Kelvin, Reaumur, Rankine;
+     float Celsius, Fahrenheit, Kelvin, Reaumur, Rankine;
 
 
         Scanner menu = new Scanner(System.in);
 
 
+
         while (true) {
 
-            System.out.print("       Temperaturas          \n\n");
+            System.out.print("       Shadow.Temperaturas          \n\n");
             System.out.print("|----------------------------|\n");
             System.out.print("| Opção 1 - Kelvin           |\n");
             System.out.print("| Opção 2 - Réaumur          |\n");
@@ -33,11 +36,12 @@ public class Temperaturas {
 
             switch (opcao) {
                 case 1:
-                    System.out.print("\nConverta e exiba em Kelvin (K)");
+                    System.out.print("\nConverta e exiba em Kelvin (K)\n");
                     System.out.print("Digite a temperatura em Celsius: ");
-                    Celsius = menu.nextDouble();
+                    Celsius = menu.nextFloat();
 
-                    Kelvin = (Celsius + 273.15);
+                    Kelvin = (Celsius + 273.15f);
+
 
                     System.out.print("\n A medida convertida é " + Kelvin + "ºK\n");
                     break;
@@ -45,9 +49,9 @@ public class Temperaturas {
                 case 2:
                     System.out.print("\nConverta e exiba em Réaumur (Re)\n");
                     System.out.print("Digite a temperatura em Celsius: ");
-                    Celsius = menu.nextDouble();
+                    Celsius = menu.nextFloat();
 
-                    Reaumur = (Celsius * 0.8);
+                    Reaumur = (Celsius * 0.8f);
 
                     System.out.print("\n A medida convertida é " + Reaumur + "ºRe\n");
                     break;
@@ -55,9 +59,9 @@ public class Temperaturas {
                 case 3:
                     System.out.print("\nConverta e exiba em Rankine (Ra)\n");
                     System.out.print("Digite a temperatura em Celsius: ");
-                    Celsius = menu.nextDouble();
+                    Celsius = menu.nextFloat();
 
-                    Rankine = (Celsius * 1.8 + 32 + 459.67);
+                    Rankine = (Celsius * 1.8f + 32f + 459.67f);
 
                     System.out.print("\n A medida convertida é " + Rankine + "ºRa\n");
                     break;
@@ -65,9 +69,9 @@ public class Temperaturas {
                 case 4:
                     System.out.print("\nConverta e exiba em Fahrenheit (F)\n");
                     System.out.print("Digite a temperatura em Celsius: ");
-                    Celsius = menu.nextDouble();
+                    Celsius = menu.nextFloat();
 
-                    Fahrenheit = (Celsius * 1.8 + 32);
+                    Fahrenheit = (Celsius * 1.8f + 32f);
 
                     System.out.print("\n A medida convertida é " + Fahrenheit + "ºF\n");
                     break;
